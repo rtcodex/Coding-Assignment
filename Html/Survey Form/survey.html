@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+</head>
+<body>
+    <form id="survey-form">
+        <div class="form-row">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+        </div>
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="">Select</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" required>
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" required>
+        </div>
+        <div class="form-row-checkbox">
+            <label>Gender:</label>
+            <input type="checkbox" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="checkbox" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <br><br>
+        <button type="button" id="submit-button">Submit</button>
+        <button type="button" id="reset-button">Reset</button>
+    </form>
+
+    <!-- Popup for displaying survey results -->
+    <div id="popup" style="display: none;">
+        <h2>Survey Results</h2>
+        <p>First Name: <span id="result-first-name"></span></p>
+        <p>Last Name: <span id="result-last-name"></span></p>
+        <p>Date of Birth: <span id="result-dob"></span></p>
+        <p>Country: <span id="result-country"></span></p>
+        <p>Gender: <span id="result-gender"></span></p>
+        <p>Profession: <span id="result-profession"></span></p>
+        <p>Email: <span id="result-email"></span></p>
+        <p>Mobile Number: <span id="result-mobile"></span></p>
+        <button type="button" id="close-popup">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
